@@ -3,7 +3,7 @@
     * Example vsftpd 3.0.3 &  FileZilla ftpd 0.9.34 beta
     * Check searchsploit for any exploits
 * Check for access
-    * Command ftp IP
+    * Command: ftp IP
     * Check for anonymous login
         * anonymous:anonymous (user:passwd)
 * If the user gets access check for file upload and download.
@@ -44,7 +44,7 @@ ftp-vuln-cve2010-4221.nse<br />
     * Command: nikto -host http://IP:PORT -output nikto.txt
 * Perform forced browsing using feroxbuster
     * Command: feroxbuster -u http://IP:port/ 
-* Feroxbuster has a preinstalled config file for commands this is why there is a lack of commands when using the CLI. 
+    * Feroxbuster has a preinstalled config file for commands this is why there is a lack of commands when using the CLI. 
 * Run davtest
     * Command: davtest -url http://IP
 * Run cadaver
