@@ -1,4 +1,4 @@
-## Port 21
+## Port 21 FTP
 * Check the ver. and service if avail
     * Example vsftpd 3.0.3 &  FileZilla ftpd 0.9.34 beta
     * Check searchsploit for any exploits
@@ -9,21 +9,21 @@
 * If the user gets access check for file upload and download.
     * Command: wget file.txt
     * Command: put file.txt
-* List of nse scripts from nmap - /usr/share/nmap/scripts
-ftp-anon.nse
-ftp-bounce.nse
-ftp-brute.nse
-ftp-libopie.nse
-ftp-proftpd-backdoor.nse
-ftp-syst.nse
-ftp-vsftpd-backdoor.nse
-ftp-vuln-cve2010-4221.nse
+* List of nse scripts from nmap - /usr/share/nmap/scripts<br />
+ftp-anon.nse<br />
+ftp-bounce.nse<br />
+ftp-brute.nse<br />
+ftp-libopie.nse<br />
+ftp-proftpd-backdoor.nse<br />
+ftp-syst.nse<br />
+ftp-vsftpd-backdoor.nse<br />
+ftp-vuln-cve2010-4221.nse<br />
 * Brute force ftp creds.
     * Ref: https://null-byte.wonderhowto.com/how-to/brute-force-ftp-credentials-get-server-access-0208763/
 ### References
 1. https://book.hacktricks.xyz/network-services-pentesting/pentesting-ftp
 ***
-## Port 25 
+## Port 25 SMTP
 * Check that port 25 is open
 * Check the ver. and service if avail. 
     * Example Postfix smtpd & hMailServer smtpd
@@ -39,7 +39,7 @@ ftp-vuln-cve2010-4221.nse
 1. https://book.hacktricks.xyz/network-services-pentesting/pentesting-smtp
 2. 
 ***
-## Port 80/443 or any HTTP service
+## Port 80/443/8080.. HTTP
 * Run nikto
     * Command: nikto -host http://IP:PORT -output nikto.txt
 * Perform forced browsing using feroxbuster
@@ -59,4 +59,6 @@ ftp-vuln-cve2010-4221.nse
 * Check session cookies and long strings to decode and possibly modify the values jwt.io, cyberchief.
 * Check web vulnerabilities such as SQLi, Path traversal, and file uploads. 
 ***
-### Port 88
+### Port 88 KERBEROS
+* Run namp kerberos script for user enum
+    * Command: Nmap -p 88 --script=krb5-enum-users --script-args krb5-enum-users.realm=’domain’,userdb=/path/to/names.txt IP
